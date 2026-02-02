@@ -1,0 +1,42 @@
+========================================
+SMARTGEN-REACT IMAGE SETUP INSTRUCTIONS
+========================================
+
+IMPORTANT: Please run one of the setup scripts to copy images into the project.
+
+OPTION 1 - PowerShell (Windows - Recommended):
+----------------------------------------------
+1. Open PowerShell
+2. Navigate to smartgen-react folder:
+   cd smartgen-react
+   
+3. Run the setup script:
+   .\setup-images.ps1
+
+OPTION 2 - Node.js (Cross-platform):
+------------------------------------
+1. Open terminal
+2. Navigate to smartgen-react folder:
+   cd smartgen-react
+   
+3. Run the setup script:
+   node setup-images.js
+
+OPTION 3 - Manual Copy:
+-----------------------
+Copy image files from parent folders to:
+- ../home_files/*.{jpg,jpeg,png,webp} → public/images/home/
+- ../blog_files/*.{jpg,jpeg,png,webp} → public/images/blog/
+- ../contact_files/*.{jpg,jpeg,png,webp} → public/images/contact/
+- ../service_files/*.{jpg,jpeg,png,webp} → public/images/service/
+- ../product_1_files/*.{jpg,jpeg,png,webp} → public/images/products/1/
+- ... (continue for all 15 product categories)
+
+AFTER SETUP:
+-----------
+1. Start the development server:
+   npm run dev
+
+2. All images should now display correctly
+
+For detailed information, see: IMAGE_SETUP_README.md
