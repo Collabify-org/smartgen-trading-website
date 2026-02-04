@@ -67,7 +67,7 @@ export default function Products() {
 
         <div className="text-center mt-12 lg:mt-16">
           <Link
-            to="/buy-online"
+            to="/product/1"
             className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-xl font-bold text-base hover:bg-primary-light transition-all shadow-lg hover:shadow-xl hover:scale-105 transform"
           >
             View All Products
