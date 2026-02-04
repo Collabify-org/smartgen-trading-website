@@ -1,10 +1,9 @@
 const items = [
-  { icon: 'flask', title: 'Construction Chemicals & Materials', desc: 'Waterproofing solutions for all your construction needs', iconClass: 'bg-blue-100 text-blue-600' },
-  { icon: 'fire', title: 'Thermal & Acoustic Insulations', desc: 'Premium insulation materials for optimal energy efficiency', iconClass: 'bg-purple-100 text-purple-600' },
-  { icon: 'wind', title: 'HVAC Insulations', desc: 'Complete HVAC solutions for commercial and residential', iconClass: 'bg-green-100 text-green-600' },
-  { icon: 'tools', title: 'Duct Accessories', desc: 'High-quality accessories for duct systems', iconClass: 'bg-yellow-100 text-yellow-600' },
-  { icon: 'layer-group', title: 'Metallic Cladding/Jacketing', desc: 'Durable aluminum cladding and jacketing solutions', iconClass: 'bg-red-100 text-red-600' },
-  { icon: 'tint', title: 'Water Treatment Chemicals', desc: 'Disinfection and odor control solutions', iconClass: 'bg-indigo-100 text-indigo-600' },
+  { icon: 'flask', title: 'Construction Chemicals & Materials', desc: 'Waterproofing solutions and construction chemical materials for all your building needs', iconClass: 'bg-blue-100 text-blue-600', to: '/product/12' },
+  { icon: 'fire', title: 'Thermal and Acoustic Insulation for Building and HVAC', desc: 'Premium thermal, acoustic, and HVAC insulation materials for energy efficiency, noise control, and climate control in commercial and residential systems', iconClass: 'bg-purple-100 text-purple-600', to: '/product/1' },
+  { icon: 'tools', title: 'Duct Accessories', desc: 'High-quality accessories for duct systems', iconClass: 'bg-yellow-100 text-yellow-600', to: '/product/2' },
+  { icon: 'layer-group', title: 'Metallic Cladding/Jacketing', desc: 'Durable aluminum cladding and jacketing solutions', iconClass: 'bg-red-100 text-red-600', to: '/product/2' },
+  { icon: 'tint', title: 'Water Treatment Chemicals', desc: 'Disinfection and odor control solutions', iconClass: 'bg-indigo-100 text-indigo-600', to: '/product/13' },
 ]
 
 const iconMap = {
@@ -22,7 +21,6 @@ export default function Products() {
   return (
     <section id="products" className="py-20 lg:py-32 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
         <div className="text-center mb-16 lg:mb-20">
           <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full mb-4">
             What We Supply
@@ -36,7 +34,6 @@ export default function Products() {
           </p>
         </div>
 
-        {/* Product cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {items.map((item, idx) => (
             <div
@@ -55,17 +52,19 @@ export default function Products() {
               <p className="text-gray-600 leading-relaxed">
                 {item.desc}
               </p>
-              <div className="mt-6 flex items-center text-primary font-semibold text-sm group-hover:gap-2 gap-1 transition-all">
+              <Link
+                to={item.to}
+                className="mt-6 inline-flex items-center text-primary font-semibold text-sm group-hover:gap-2 gap-1 transition-all hover:text-primary/90"
+              >
                 Learn more
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
 
-        {/* CTA button */}
         <div className="text-center mt-12 lg:mt-16">
           <Link
             to="/buy-online"
