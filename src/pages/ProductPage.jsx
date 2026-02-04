@@ -1,12 +1,36 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import { productImages, productImageFolders } from '../data/pageImages'
 
 const PRODUCT_DATA = {
   1: {
-    title: 'Thermal & Acoustic Insulations',
-    description: 'Discover our extensive range of thermal insulation solutions featuring top brands like Kimmco, Afico, K Flex, and Aerofoam. Achieve optimal energy efficiency and comfort with our high-quality fiberglass and rockwool insulation products.',
+    title: 'Thermal and Acoustic Insulation for Building and HVAC',
+    description: 'Discover our extensive range of thermal, acoustic, and HVAC insulation solutions featuring top brands like Kimmco, Afico, K Flex, and Aerofoam. Achieve optimal energy efficiency, noise control, and comfort with our high-quality fiberglass, rockwool, and duct insulation products for commercial and residential systems.',
     brands: ['Kimmco', 'Afico', 'K Flex', 'Aerofoam'],
     products: ['Fiber Glass Acoustic Insulation', 'Kimmco Fiber Glass Duct Insulation', 'Rockwool Pipe Insulation', 'XLPE Thermal Insulation Sheet', 'Rubber Insulation', 'Self-Adhesive Rubber Insulation'],
+    insulationTypes: [
+      {
+        type: 'Thermal Insulation',
+        description: 'Energy-efficient solutions for building envelope and climate control. Reduce heat transfer and improve comfort in commercial and residential buildings.',
+        icon: 'fire',
+        iconClass: 'bg-orange-100 text-orange-600',
+        products: ['XLPE Thermal Insulation Sheet', 'Rockwool Pipe Insulation', 'Rubber Insulation', 'Self-Adhesive Rubber Insulation'],
+      },
+      {
+        type: 'Acoustic Insulation',
+        description: 'Sound absorption and noise control for quieter, more comfortable spaces. Ideal for walls, ceilings, and partition systems.',
+        icon: 'volume',
+        iconClass: 'bg-purple-100 text-purple-600',
+        products: ['Fiber Glass Acoustic Insulation'],
+      },
+      {
+        type: 'HVAC & Duct Insulation',
+        description: 'Duct and HVAC system insulation for optimal airflow, temperature control, and condensation prevention in commercial and residential applications.',
+        icon: 'wind',
+        iconClass: 'bg-green-100 text-green-600',
+        products: ['Kimmco Fiber Glass Duct Insulation'],
+      },
+    ],
   },
   2: {
     title: 'Duct Accessories',
@@ -94,12 +118,24 @@ const PRODUCT_DATA = {
   },
 }
 
+const PRODUCT_CATEGORIES = Object.entries(PRODUCT_DATA).map(([id, data]) => ({
+  id: Number(id),
+  title: data.title,
+}))
+
 const PLACEHOLDER_SVG = 'data:image/svg+xml,' + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><rect fill="#f3f4f6" width="400" height="400"/><text x="50%" y="50%" fill="#9ca3af" font-family="sans-serif" font-size="14" text-anchor="middle" dy=".3em">Product image</text></svg>'
 )
 
+const INSULATION_ICONS = {
+  fire: 'M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z',
+  volume: 'M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z',
+  wind: 'M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.242 4.243 3 3 0 004.242-4.243zm0-5.758a3 3 0 10-4.242-4.243 3 3 0 004.242 4.243z',
+}
+
 export default function ProductPage() {
   const { id } = useParams()
+  const location = useLocation()
   const num = parseInt(id, 10)
   const productData = PRODUCT_DATA[num] || {
     title: `Product ${id}`,
@@ -110,9 +146,55 @@ export default function ProductPage() {
   const folder = productImageFolders[num]
   const images = (productImages[num] || []).filter((f) => f !== 'smartgen-logo-dOqygyGy7QHB2GZQ.jpeg')
 
+  // Scroll to insulation type when page loads with hash (e.g. from "open in new tab")
+  useEffect(() => {
+    const hash = location.hash?.slice(1)
+    if (!hash) return
+    const el = document.getElementById(hash)
+    if (el) {
+      const timer = setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
+      return () => clearTimeout(timer)
+    }
+  }, [location.hash])
+
   return (
-    <main className="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50 min-h-screen">
+    <main className="py-10 lg:py-16 bg-gradient-to-b from-white to-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 lg:gap-10">
+          {/* Left: Product category navigation */}
+          <aside className="lg:sticky lg:top-24 lg:self-start order-2 lg:order-1">
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+              <div className="px-5 py-4 border-b border-gray-100 bg-gradient-to-r from-primary/5 to-accent/5">
+                <h2 className="text-sm font-bold uppercase tracking-wider text-navy flex items-center gap-2">
+                  <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM16 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2zM16 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6z" />
+                  </svg>
+                  Categories
+                </h2>
+              </div>
+              <nav className="max-h-[70vh] overflow-y-auto py-2" aria-label="Product categories">
+                {PRODUCT_CATEGORIES.map((cat) => {
+                  const isActive = num === cat.id
+                  return (
+                    <Link
+                      key={cat.id}
+                      to={`/product/${cat.id}`}
+                      className={`block px-5 py-3 text-sm border-l-2 transition-colors ${
+                        isActive
+                          ? 'border-primary bg-primary/10 text-primary font-semibold'
+                          : 'border-transparent text-gray-700 hover:bg-gray-50 hover:text-primary hover:border-primary/50'
+                      }`}
+                    >
+                      {cat.title}
+                    </Link>
+                  )
+                })}
+              </nav>
+            </div>
+          </aside>
+
+          {/* Right: Content area */}
+          <div className="min-w-0 order-1 lg:order-2">
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
@@ -162,8 +244,93 @@ export default function ProductPage() {
           </div>
         )}
 
-        {/* Products List */}
-        {productData.products && productData.products.length > 0 && (
+        {/* Insulation Types (product 1 only) */}
+        {productData.insulationTypes && productData.insulationTypes.length > 0 && (
+          <div id="insulation-types" className="mb-16 scroll-mt-24">
+            <div className="text-center mb-10">
+              <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full mb-4">
+                What We Offer
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy mb-4">
+                Insulation Types
+              </h2>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+              <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Thermal, acoustic, and HVAC insulation solutions for building and duct systems
+              </p>
+            </div>
+
+            {/* Quick access: jump to each type or open in new tab */}
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              {productData.insulationTypes.map((ins) => {
+                const slug = ins.type.toLowerCase().replace(/\s*&\s*/g, '-').replace(/\s+/g, '-')
+                const hashUrl = `${location.pathname}#${slug}`
+                return (
+                  <div key={ins.type} className="flex items-center gap-1">
+                    <button
+                      type="button"
+                      onClick={() => document.getElementById(slug)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                      className="inline-flex items-center gap-2 bg-white border border-gray-200 text-navy px-4 py-2.5 rounded-xl font-semibold text-sm hover:bg-primary/5 hover:border-primary/30 hover:text-primary transition-all shadow-sm"
+                    >
+                      {ins.type}
+                    </button>
+                    <a
+                      href={hashUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-gray-200 text-gray-500 hover:bg-primary/10 hover:text-primary hover:border-primary/30 transition-all shrink-0"
+                      title={`Open ${ins.type} in new tab`}
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </div>
+                )
+              })}
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+              {productData.insulationTypes.map((ins) => {
+                const slug = ins.type.toLowerCase().replace(/\s*&\s*/g, '-').replace(/\s+/g, '-')
+                return (
+                  <div
+                    key={ins.type}
+                    id={slug}
+                    className="group bg-white rounded-2xl p-8 border border-gray-100 hover:border-primary/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-mt-24 min-h-0 overflow-visible"
+                  >
+                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${ins.iconClass} group-hover:scale-110 transition-transform duration-300`}>
+                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={INSULATION_ICONS[ins.icon] || INSULATION_ICONS.fire} />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-navy mb-3 group-hover:text-primary transition-colors">
+                      {ins.type}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed mb-6 text-sm">
+                      {ins.description}
+                    </p>
+                    <ul className="space-y-2">
+                      {ins.products.map((name) => (
+                        <li key={name} className="flex items-center gap-2 text-gray-700 font-medium text-sm">
+                          <span className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                          </span>
+                          {name}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Products List (generic when no insulationTypes) */}
+        {productData.products && productData.products.length > 0 && !productData.insulationTypes && (
           <div className="mb-12">
             <h2 className="text-2xl font-extrabold text-navy mb-6">Available Products</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -252,6 +419,8 @@ export default function ProductPage() {
                 Call Us
               </a>
             </div>
+          </div>
+        </div>
           </div>
         </div>
       </div>

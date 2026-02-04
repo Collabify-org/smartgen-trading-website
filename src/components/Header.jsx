@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const productItems = [
-  { id: 1, label: 'Thermal & Acoustic Insulations' },
+  { id: 1, label: 'Thermal and Acoustic Insulation for Building and HVAC' },
   { id: 2, label: 'Duct Accessories' },
   { id: 3, label: 'Vibration Isolators' },
   { id: 4, label: 'Hangers & Supports' },

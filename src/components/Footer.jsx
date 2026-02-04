@@ -9,7 +9,7 @@ const quickLinks = [
 ]
 
 const productRanges = [
-  { label: 'Thermal & Acoustic Insulations', id: 1 },
+  { label: 'Thermal and Acoustic Insulation for Building and HVAC', id: 1 },
   { label: 'Duct Accessories', id: 2 },
   { label: 'Waterproofing & Adhesives', id: 12 },
   { label: 'Water Treatment Chemicals', id: 13 },
