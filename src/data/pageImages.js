@@ -37,5 +37,5 @@ export const productImages = {
   12: ['xchem-ultrashield-ac10-mv0DnBWDeVUVL3Q0.jpg', 'xchem-ultrashield-hy-17-hybrid-pud-coating-YrDlEZbOaNcLNN05.jpg', 'xchem-v-bond-400-vinyl-flooring-adhesive-dJo63L1G9nH7y1vR.jpg', 'turf-fix-511-xchem-smartgen-AR0LQgEB1au5wyPB.jpg', 'smartgen-logo-dOqygyGy7QHB2GZQ.jpeg'].filter(isImage),
   13: ['chemcial-mp8vjjKX11CqW8pP.jpg', 'water-molecules-YbNvPPl2xjirLjjN.jpg', 'smartgen-logo-dOqygyGy7QHB2GZQ.jpeg'].filter(isImage),
   14: ['smartgen-logo-dOqygyGy7QHB2GZQ.jpeg'].filter(isImage),
-  15: ['ducted-split-ac-o-general-smart-generation-AQExxjQ2DgcR8O3v.webp', 'split-ac-o-general-mePxxXO60rTpwDaL.webp', 'o-general-logo-dJoZZOEwlQtpWPb9.jpg', 'smartgen-logo-dOqygyGy7QHB2GZQ.jpeg'].filter(isImage),
+  15: ['ducted-split-ac-o-general-smart-generation-AQExxjQ2DgcR8O3v.webp', 'split-ac-o-general-mePxxXO60rTpwDaL.webp', 'smartgen-logo-dOqygyGy7QHB2GZQ.jpeg'].filter(isImage),
 }

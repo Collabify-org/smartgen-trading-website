@@ -172,7 +172,7 @@ const PRODUCT_DATA = {
     title: 'Air Conditioners',
     description: 'Premium O General air conditioning systems including ducted split AC units and split AC systems. Reliable cooling solutions for residential and commercial applications with energy-efficient technology.',
     brands: ['O General'],
-    products: ['Ducted Split AC O General', 'Split AC O General'],
+    products: ['Ducted Split AC', 'Split AC'],
   },
 }
 
@@ -202,7 +202,7 @@ const DUCT_ACCESSORY_CARDS = [
   { name: 'Duct Flange', image: 'duct-flange-YbNv0vzpzxHQ1624.jpg' },
   { name: 'Embossed Duct Corner', image: 'ductmate-corner-YbNv0vVwlqubpoJl.png' },
   { name: 'Flexible Duct Connector', image: 'duct-connector-m7VwXwJX6etVlLWO.jpg' },
-  { name: 'Acrylic Duct Sealant', image: 'logo-chemx3217-mnlvKqBMP3HkrQNR.png' },
+  { name: 'Acrylic Duct Sealant', image: 'logo-chemx3217-mnlvKqBMP3HkrQNR.jpeg' },
   { name: 'Duct Canvas Coating / Lagging Adhesive', image: 'enicoat-3036-plastic-pail-mjEv1bBVlbTMQZz5.png' },
   { name: 'Insulation Glue', image: 'xchem-logo-AwvMNb2x2Pce8Oj6.png' },
   { name: 'Aluminum Cladding Rolls', image: 'aluminum-cladding-pabco-A3QwLjW6ELso6y9G.jpg' },
@@ -379,27 +379,14 @@ export default function ProductPage() {
           </div>
         )}
 
-        {/* Product Images Gallery */}
         {num !== 13 && (
         <div className="mb-12">
           <h2 className="text-2xl font-extrabold text-navy mb-6">Product Gallery</h2>
           {num === 2 && DUCT_ACCESSORY_CARDS.length > 0 ? (
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
               {DUCT_ACCESSORY_CARDS.map((card) => (
-                <div
-                  key={card.name}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1"
-                >
-                  <img
-                    src={`/${productImageFolders[2]}/${card.image}`}
-                    alt={card.name}
-                    className="w-full aspect-square object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                    onError={(e) => {
-                      e.target.onerror = null
-                      e.target.src = PLACEHOLDER_SVG
-                    }}
-                  />
+                <div key={card.name} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1">
+                  <img src={`/${productImageFolders[2]}/${card.image}`} alt={card.name} className="w-full aspect-square object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = PLACEHOLDER_SVG }} />
                   <h3 className="mt-3 text-sm font-semibold text-navy text-center px-2">
                     {card.name}
                   </h3>
