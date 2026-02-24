@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/home/generated-m7VwQ5GMgyc3b7gp.png"
+          src="/images/home/smartgen-home.png"
           alt="SmartGen - Construction materials"
           className="w-full h-full object-cover bg-navy"
           onError={(e) => {
@@ -77,7 +77,7 @@ export default function Hero() {
           <div className="hidden lg:block relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 backdrop-blur">
               <img
-                src="/images/home/generated-m7VwQ5GMgyc3b7gp.png"
+                src="/images/home/smartgen-home.png"
                 alt="SmartGen products"
                 className="w-full h-96 object-cover bg-navy"
                 onError={(e) => { e.target.style.display = 'none' }}

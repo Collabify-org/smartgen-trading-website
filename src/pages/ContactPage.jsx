@@ -53,6 +53,25 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+                  {/* Customer Service Phone */}
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-navy mb-2 text-lg">Customer Service</h3>
+                      <a
+                        href="tel:+966537262593"
+                        className="text-gray-800 hover:text-primary transition-colors font-semibold text-base"
+                      >
+                        +966 53 726 2593
+                      </a>
+                      <p className="text-gray-500 text-sm mt-1">Call us for urgent assistance</p>
+                    </div>
+                  </div>
+
                   {/* Location */}
                   <div className="flex items-start gap-4">
                     <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -62,7 +81,17 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-navy mb-2 text-lg">Our Location</h3>
-                      <p className="text-gray-600 text-base">Riyadh, Saudi Arabia</p>
+                      <p className="text-gray-600 text-base">
+                        Abi Bin Kaab Street
+                        <br />
+                        Building No:3036
+                        <br />
+                        AL Sanayya Dist
+                        <br />
+                        Riyadh-12844
+                        <br />
+                        Saudi Arabia
+                      </p>
                       <p className="text-gray-500 text-sm mt-1">Serving all of KSA</p>
                     </div>
                   </div>

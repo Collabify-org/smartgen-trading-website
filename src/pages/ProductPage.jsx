@@ -5,20 +5,96 @@ import { productImages, productImageFolders } from '../data/pageImages'
 const PRODUCT_DATA = {
   1: {
     title: 'Thermal and Acoustic Insulation for Building and HVAC',
-    description: 'Discover our extensive range of thermal, acoustic, and HVAC insulation solutions featuring top brands like Kimmco, Afico, K Flex, and Aerofoam. Achieve optimal energy efficiency, noise control, and comfort with our high-quality fiberglass, rockwool, and duct insulation products for commercial and residential systems.',
+    description:
+      'Discover our extensive range of thermal and acoustic insulation solutions featuring top brands like Kimmco, Afico, K Flex, and Aerofoam. From glass wool and rockwool to closed-cell rubber and XLPE foam, we provide high‑performance insulation for HVAC ducts, pipes, and building envelopes to improve energy efficiency, fire safety, and comfort in residential, commercial, and industrial projects.',
     brands: ['Kimmco', 'Afico', 'K Flex', 'Aerofoam'],
-    products: ['Fiber Glass Acoustic Insulation', 'Kimmco Fiber Glass Duct Insulation', 'Rockwool Pipe Insulation', 'XLPE Thermal Insulation Sheet', 'Rubber Insulation', 'Self-Adhesive Rubber Insulation'],
+    products: [
+      'Fiber Glass Roll Insulation with Aluminum Facing',
+      'Fiber Glass Pipe Insulation with Aluminum Facing',
+      'Fiber Glass Board / Sheet Insulation with Aluminum Facing',
+      'Fiber Glass Acoustic Board / Sheet Insulation',
+      'Fiber Glass Acoustic Roll Insulation',
+      'Kimmco Fiber Glass Duct Insulation',
+      'Rockwool Roll Insulation with Facing',
+      'Rockwool Board Insulation (Unfaced & Faced)',
+      'Rockwool Pipe Insulation',
+      'Closed Cell Rubber Sheet / Roll Insulation (Plain)',
+      'Closed Cell Rubber Sheet / Roll Insulation with Aluminum Foil',
+      'Closed Cell Rubber Sheet / Roll Insulation – Self Adhesive',
+      'Closed Cell Rubber Tube / Pipe Insulation',
+      'XLPE Closed Cell Sheet / Roll Insulation with AluPET Facing',
+      'XLPE Closed Cell Sheet / Roll Insulation – No Clad',
+      'XLPE Closed Cell Tube / Pipe Insulation',
+      'Insulation Accessories (Alupet Tapes, Fasteners, Pins, Adhesives)',
+    ],
     insulationTypes: [
-      { type: 'Thermal Insulation', description: 'Energy-efficient solutions for building envelope and climate control. Reduce heat transfer and improve comfort in commercial and residential buildings.', icon: 'fire', iconClass: 'bg-orange-100 text-orange-600', products: ['XLPE Thermal Insulation Sheet', 'Rockwool Pipe Insulation', 'Rubber Insulation', 'Self-Adhesive Rubber Insulation'] },
-      { type: 'Acoustic Insulation', description: 'Sound absorption and noise control for quieter, more comfortable spaces. Ideal for walls, ceilings, and partition systems.', icon: 'volume', iconClass: 'bg-purple-100 text-purple-600', products: ['Fiber Glass Acoustic Insulation'] },
-      { type: 'HVAC & Duct Insulation', description: 'Duct and HVAC system insulation for optimal airflow, temperature control, and condensation prevention in commercial and residential applications.', icon: 'wind', iconClass: 'bg-green-100 text-green-600', products: ['Kimmco Fiber Glass Duct Insulation'] },
+      {
+        type: 'Thermal Insulation',
+        description:
+          'Energy‑efficient solutions for building envelopes, roofs, and HVAC systems. Reduce heat transfer, protect equipment, and improve comfort in commercial and residential buildings.',
+        icon: 'fire',
+        iconClass: 'bg-orange-100 text-orange-600',
+        products: [
+          'XLPE Closed Cell Sheet / Roll Insulation with AluPET Facing',
+          'XLPE Closed Cell Sheet / Roll Insulation – No Clad',
+          'Closed Cell Rubber Sheet / Roll Insulation (Plain)',
+          'Closed Cell Rubber Sheet / Roll Insulation with Aluminum Foil',
+          'Closed Cell Rubber Sheet / Roll Insulation – Self Adhesive',
+          'Rockwool Roll Insulation with Facing',
+          'Rockwool Board Insulation (Unfaced & Faced)',
+          'Rockwool Pipe Insulation',
+        ],
+      },
+      {
+        type: 'Acoustic Insulation',
+        description:
+          'Sound‑absorbing fiberglass and rockwool solutions for walls, ceilings, partitions, and drainage systems, designed to control noise in hotels, hospitals, schools, and residential buildings.',
+        icon: 'volume',
+        iconClass: 'bg-purple-100 text-purple-600',
+        products: ['Fiber Glass Acoustic Board / Sheet Insulation', 'Fiber Glass Acoustic Roll Insulation'],
+      },
+      {
+        type: 'HVAC & Duct Insulation',
+        description:
+          'Duct and pipe insulation systems for optimal airflow, condensation control, and energy savings in HVAC networks, chillers, and mechanical rooms.',
+        icon: 'wind',
+        iconClass: 'bg-green-100 text-green-600',
+        products: [
+          'Fiber Glass Roll Insulation with Aluminum Facing',
+          'Fiber Glass Pipe Insulation with Aluminum Facing',
+          'Kimmco Fiber Glass Duct Insulation',
+          'XLPE Closed Cell Tube / Pipe Insulation',
+          'Closed Cell Rubber Tube / Pipe Insulation',
+        ],
+      },
     ],
   },
   2: {
     title: 'Duct Accessories',
     description: 'Complete range of HVAC duct accessories including flanges, corners, aluminum cladding, and flexible insulated ducts. Essential components for efficient duct system installation and maintenance.',
-    brands: ['Pabco'],
-    products: ['Duct Flange', 'Duct Corner', 'Aluminum Cladding', 'Flexible Insulated Duct', 'Duct Pins', 'Insulation Fasteners'],
+    brands: ['Pabco', 'Aeroduct', 'Insulflex', 'Duct-Ficx', 'Xchem', 'Paragon', 'ITW'],
+    products: [
+      'Duct G Clamp With Bolt',
+      'Duct Corner Plain',
+      'Insulated Flexible Duct',
+      'Aluminum Un Insulated Flexible Duct',
+      'Stick Pins / Insulation Pin with Washer',
+      'Jubilee Strap / SS Strap & Locking Nut',
+      'Foam Tape / Duct Gasket Tape',
+      'Aluminum Plain Tape',
+      'Aluminum FSK Tape',
+      'Yellow Strap',
+      'Duct Flange',
+      'Embossed Duct Corner',
+      'Flexible Duct Connector',
+      'Acrylic Duct Sealant',
+      'Duct Canvas Coating / Lagging Adhesive',
+      'Insulation Glue',
+      'Aluminum Cladding Rolls',
+      'Aluminum Sheet',
+      'Aluminum Strapping',
+      'Wing Seal',
+    ],
   },
   3: {
     title: 'Vibration Isolators',
@@ -35,8 +111,8 @@ const PRODUCT_DATA = {
   5: {
     title: 'Copper & Fittings',
     description: 'Premium Rime copper products including pancake coils, straight lengths, and comprehensive copper fittings. Ideal for HVAC and plumbing applications requiring reliable copper solutions.',
-    brands: ['Rime'],
-    products: ['Copper Fittings', 'Rime Copper Pancake Coil', 'Rime Copper Straight Length'],
+    brands: ['Rime', 'MUELLER (USA)', 'NWM (KOREA)', 'SAMPO (KOREA)', 'Hitachi', 'National', 'Benkan'],
+    products: ['Copper Fittings', 'Rime Copper Pancake Coil', 'Rime Copper Straight Length', 'THREADED FITTINGS (Hitachi)', 'GROOVED FITTINGS (National)', 'WELDED FITTINGS (Benkan)'],
   },
   6: {
     title: 'VAV and Dampers',
@@ -71,7 +147,7 @@ const PRODUCT_DATA = {
   11: {
     title: 'Plumbing',
     description: 'Comprehensive plumbing solutions from Araib including PPR pipes, PVC pipes, CPVC fittings, PPR fittings, and Araib cement. Complete materials for residential and commercial plumbing projects.',
-    brands: ['Araib'],
+    brands: ['Araib', 'JASCO BLACK STEEL SCH 40 & 80 PIPES', 'SSP ERW PIPES', 'AL JAZEERA ERW PIPES'],
     products: ['Araib PPR Pipes', 'Araib PVC Pipes', 'CPVC Fittings', 'PPR Fittings', 'Araib Cement'],
   },
   12: {
@@ -111,6 +187,29 @@ const INSULATION_ICONS = {
   volume: 'M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z',
   wind: 'M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.242 4.243 3 3 0 004.242-4.243zm0-5.758a3 3 0 10-4.242-4.243 3 3 0 004.242 4.243z',
 }
+
+const DUCT_ACCESSORY_CARDS = [
+  { name: 'Duct G Clamp With Bolt', image: 'jubilee-clamp-YbNv0vL4LBiZJ67r.jpg' },
+  { name: 'Duct Corner Plain', image: 'duct-corner-YlevKvg07JC4jNrN.jpg' },
+  { name: 'Insulated Flexible Duct', image: 'flexible-insulated-duct-mk3zKzJWNxSpDB3r.jpg' },
+  { name: 'Aluminum Un Insulated Flexible Duct', image: 'un-insulated-flexible-duct-YD06X6wWN5IBVPly.jpg' },
+  { name: 'Stick Pins / Insulation Pin with Washer', image: 'duct-pin-AE0ogo7EZaFogNlJ.jpeg' },
+  { name: 'Jubilee Strap / SS Strap & Locking Nut', image: 'jubilee-clamp-YbNv0vL4LBiZJ67r.jpg' },
+  { name: 'Foam Tape / Duct Gasket Tape', image: 'foam-tape-Yyv3K3DX0bfBqR95.png' },
+  { name: 'Aluminum Plain Tape', image: 'aluminum-plain-tape-YlevKvoQRZfyqWpX.jpg' },
+  { name: 'Aluminum FSK Tape', image: 'aluminum-fsk-tape-AVLpgpvGO0iNz9VO.jpg' },
+  { name: 'Yellow Strap', image: 'yello-strap-AGB6g6WpBrf6VzOB.jpg' },
+  { name: 'Duct Flange', image: 'duct-flange-YbNv0vzpzxHQ1624.jpg' },
+  { name: 'Embossed Duct Corner', image: 'ductmate-corner-YbNv0vVwlqubpoJl.png' },
+  { name: 'Flexible Duct Connector', image: 'duct-connector-m7VwXwJX6etVlLWO.jpg' },
+  { name: 'Acrylic Duct Sealant', image: 'logo-chemx3217-mnlvKqBMP3HkrQNR.png' },
+  { name: 'Duct Canvas Coating / Lagging Adhesive', image: 'enicoat-3036-plastic-pail-mjEv1bBVlbTMQZz5.png' },
+  { name: 'Insulation Glue', image: 'xchem-logo-AwvMNb2x2Pce8Oj6.png' },
+  { name: 'Aluminum Cladding Rolls', image: 'aluminum-cladding-pabco-A3QwLjW6ELso6y9G.jpg' },
+  { name: 'Aluminum Sheet', image: 'aluminum-cladding-pabco-A3QwLjW6ELso6y9G.jpg' },
+  { name: 'Aluminum Strapping', image: 'aluminum-strap-YBgrQZVoQ4Il6zeq.jpg' },
+  { name: 'Wing Seal', image: 'wing-seal-YKb6ejpo8DhEzNBo.jpeg' },
+]
 
 export default function ProductPage() {
   const { id } = useParams()
@@ -167,6 +266,7 @@ export default function ProductPage() {
           </aside>
 
           <div className="min-w-0 order-1 lg:order-2">
+        {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Link to="/" className="text-gray-400 hover:text-primary transition-colors">
@@ -208,6 +308,7 @@ export default function ProductPage() {
           </div>
         )}
 
+        {/* Insulation Types (product 1 only) */}
         {productData.insulationTypes && productData.insulationTypes.length > 0 && (
           <div id="insulation-types" className="mb-16 scroll-mt-24">
             <div className="text-center mb-10">
@@ -259,6 +360,7 @@ export default function ProductPage() {
           </div>
         )}
 
+        {/* Products List (when no insulationTypes) */}
         {productData.products && productData.products.length > 0 && !productData.insulationTypes && (
           <div className="mb-12">
             <h2 className="text-2xl font-extrabold text-navy mb-6">Available Products</h2>
@@ -277,15 +379,63 @@ export default function ProductPage() {
           </div>
         )}
 
+        {/* Product Images Gallery */}
+        {num !== 13 && (
         <div className="mb-12">
           <h2 className="text-2xl font-extrabold text-navy mb-6">Product Gallery</h2>
-          {folder && images.length > 0 ? (
+          {num === 2 && DUCT_ACCESSORY_CARDS.length > 0 ? (
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-              {images.map((filename) => (
-                <div key={filename} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1">
-                  <img src={`/${folder}/${filename}`} alt={productData.title} className="w-full aspect-square object-cover bg-gray-100 group-hover:scale-110 transition-transform duration-300" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = PLACEHOLDER_SVG }} />
+              {DUCT_ACCESSORY_CARDS.map((card) => (
+                <div
+                  key={card.name}
+                  className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1"
+                >
+                  <img
+                    src={`/${productImageFolders[2]}/${card.image}`}
+                    alt={card.name}
+                    className="w-full aspect-square object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.onerror = null
+                      e.target.src = PLACEHOLDER_SVG
+                    }}
+                  />
+                  <h3 className="mt-3 text-sm font-semibold text-navy text-center px-2">
+                    {card.name}
+                  </h3>
                 </div>
               ))}
+            </div>
+          ) : folder && images.length > 0 ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+              {images.map((filename) => {
+                const isSilentPipes = num === 9
+                const isFullRowSilent =
+                  isSilentPipes &&
+                  (filename.includes('incola-exclusive') ||
+                    filename.includes('incola-advantages-yeni-2') ||
+                    filename.includes('soundproof-pipe-vesbo'))
+                const wrapperClasses = isFullRowSilent
+                  ? 'group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1 col-span-2 sm:col-span-3 lg:col-span-4'
+                  : 'group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1'
+                const imgClasses = isFullRowSilent
+                  ? 'w-full object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300'
+                  : 'w-full aspect-square object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300'
+                return (
+                  <div key={filename} className={wrapperClasses}>
+                    <img
+                      src={`/${folder}/${filename}`}
+                      alt={productData.title}
+                      className={imgClasses}
+                      loading="lazy"
+                      onError={(e) => {
+                        e.target.onerror = null
+                        e.target.src = PLACEHOLDER_SVG
+                      }}
+                    />
+                  </div>
+                )
+              })}
             </div>
           ) : (
             <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-100 p-10 text-center">
@@ -295,6 +445,7 @@ export default function ProductPage() {
             </div>
           )}
         </div>
+        )}
 
         <div className="bg-gradient-to-r from-primary to-accent rounded-3xl p-10 lg:p-12 text-white text-center shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
