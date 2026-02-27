@@ -26,48 +26,71 @@ const PRODUCT_DATA = {
       'XLPE Closed Cell Sheet / Roll Insulation – No Clad',
       'XLPE Closed Cell Tube / Pipe Insulation',
       'Insulation Accessories (Alupet Tapes, Fasteners, Pins, Adhesives)',
+      'Phenolic Insulations',
     ],
     insulationTypes: [
       {
-        type: 'Thermal Insulation',
+        type: 'Fiber Glass Insulation',
         description:
-          'Energy‑efficient solutions for building envelopes, roofs, and HVAC systems. Reduce heat transfer, protect equipment, and improve comfort in commercial and residential buildings.',
+          'High‑performance fiberglass insulation for ducts, pipes, walls, and ceilings, providing excellent thermal and acoustic performance in building and HVAC applications.',
         icon: 'fire',
         iconClass: 'bg-orange-100 text-orange-600',
         products: [
-          'XLPE Closed Cell Sheet / Roll Insulation with AluPET Facing',
-          'XLPE Closed Cell Sheet / Roll Insulation – No Clad',
+          'Fiber Glass Roll Insulation with Aluminum Facing',
+          'Fiber Glass Pipe Insulation with Aluminum Facing',
+          'Fiber Glass Board / Sheet Insulation with Aluminum Facing',
+          'Fiber Glass Acoustic Board / Sheet Insulation',
+          'Fiber Glass Acoustic Roll Insulation',
+          'Kimmco Fiber Glass Duct Insulation',
+        ],
+      },
+      {
+        type: 'Closed Cell Elastomeric Rubber Foam Insulation',
+        description:
+          'Flexible closed-cell elastomeric rubber insulation for chilled water and refrigerant lines, designed to control condensation and save energy.',
+        icon: 'wind',
+        iconClass: 'bg-green-100 text-green-600',
+        products: [
           'Closed Cell Rubber Sheet / Roll Insulation (Plain)',
           'Closed Cell Rubber Sheet / Roll Insulation with Aluminum Foil',
           'Closed Cell Rubber Sheet / Roll Insulation – Self Adhesive',
+          'Closed Cell Rubber Tube / Pipe Insulation',
+        ],
+      },
+      {
+        type: 'Closed Cell PolyOlefin (XLPE) Insulations',
+        description:
+          'Lightweight, closed-cell XLPE insulation for ducts and pipes, offering excellent thermal performance, clean finish, and moisture resistance.',
+        icon: 'wind',
+        iconClass: 'bg-green-100 text-green-600',
+        products: [
+          'XLPE Closed Cell Sheet / Roll Insulation with AluPET Facing',
+          'XLPE Closed Cell Sheet / Roll Insulation – No Clad',
+          'XLPE Closed Cell Tube / Pipe Insulation',
+        ],
+      },
+      {
+        type: 'Rockwool Insulations',
+        description:
+          'Fire‑resistant rockwool rolls, boards, and pipe sections for high‑temperature and acoustic applications in building and industrial projects.',
+        icon: 'fire',
+        iconClass: 'bg-orange-100 text-orange-600',
+        products: [
           'Rockwool Roll Insulation with Facing',
           'Rockwool Board Insulation (Unfaced & Faced)',
           'Rockwool Pipe Insulation',
         ],
       },
       {
-        type: 'Acoustic Insulation',
+        type: 'Phenolic Insulations',
         description:
-          'Sound‑absorbing fiberglass and rockwool solutions for walls, ceilings, partitions, and drainage systems, designed to control noise in hotels, hospitals, schools, and residential buildings.',
+          'High‑performance phenolic insulation systems for ductwork and pipework where superior thermal performance and low weight are critical.',
         icon: 'volume',
         iconClass: 'bg-purple-100 text-purple-600',
-        products: ['Fiber Glass Acoustic Board / Sheet Insulation', 'Fiber Glass Acoustic Roll Insulation'],
-      },
-      {
-        type: 'HVAC & Duct Insulation',
-        description:
-          'Duct and pipe insulation systems for optimal airflow, condensation control, and energy savings in HVAC networks, chillers, and mechanical rooms.',
-        icon: 'wind',
-        iconClass: 'bg-green-100 text-green-600',
-        products: [
-          'Fiber Glass Roll Insulation with Aluminum Facing',
-          'Fiber Glass Pipe Insulation with Aluminum Facing',
-          'Kimmco Fiber Glass Duct Insulation',
-          'XLPE Closed Cell Tube / Pipe Insulation',
-          'Closed Cell Rubber Tube / Pipe Insulation',
-        ],
+        products: ['Phenolic Insulations'],
       },
     ],
+    applications: 'Thermal and Acoustic insulations for Buildings, HVAC Ducts and Pipes.',
   },
   2: {
     title: 'Duct Accessories',
@@ -100,19 +123,46 @@ const PRODUCT_DATA = {
     title: 'Vibration Isolators',
     description: 'Professional vibration isolation solutions for HVAC equipment. Includes duct mounts, metal sandwich pads, rubber mounts for split AC units, and waffle pads to reduce noise and extend equipment life.',
     brands: ['Vibratek India'],
-    products: ['Duct Mount', 'Metal Sandwich Pad', 'Round Rubber Mount for Split AC', 'Sandwich Pad', 'Waffle Pad'],
+    products: [
+      'Cased Spring Mount',
+      'Restraint Spring Mount',
+      'Spring Hanger',
+      'Single Spring Mount',
+      'Rubber Mount for Split AC Outdoor Unit',
+      'Multilayer Rubber pad',
+      'Sandwich Rubber pad',
+      'Waffle-Anti Vibration pad',
+      'Duct Mount',
+      'Neoprene Rubber Hanger',
+    ],
+    applications: 'Vibration isolators are used to reduce the transmission of vibration and noise from mechanical equipment to surrounding structures.',
   },
   4: {
     title: 'Hangers & Supports',
-    description: 'Comprehensive range of pipe hangers and supports from Tembo. Includes beam clamps, clevis hangers, pipe roller chairs, riser clamps, U-bolts, and plain hangers for secure pipe installation.',
+    description: 'Comprehensive range of pipe hangers and supports from Tembo. Includes beam clamps, clevis hangers, pipe roller chairs, riser clamps, U-bolts, and plain hangers for secure pipe installation.Hangers and supports for mechanical, plumbing and fire fighting pipes.',
     brands: ['Tembo'],
-    products: ['Beam Clamp', 'Clevis Hanger ULFM', 'Pipe Roller Chair', 'Riser Clamp', 'U-Bolt', 'Plain Hanger'],
+    products: [
+      'Split Clamp with EPDM Lining',
+      'Split Clamp',
+      'Swivel Hanger(UL/FM)',
+      'Clevis Hanger(Ul/FM)',
+      'U bolt',
+      'U straps with and without EPDM Lining',
+      'Rubber Support Inserts',
+      'Riser Clamps',
+      'Pipe Roller chair',
+      'Beam Clamp',
+      'Threaded Rods and Fasteners',
+      'Struct Channels',
+    ],
+    applications: 'Hangers and supports for mechanical, plumbing and fire fighting pipes.',
   },
   5: {
     title: 'Copper & Fittings',
     description: 'Premium Rime copper products including pancake coils, straight lengths, and comprehensive copper fittings. Ideal for HVAC and plumbing applications requiring reliable copper solutions.',
-    brands: ['Rime', 'MUELLER (USA)', 'NWM (KOREA)', 'SAMPO (KOREA)', 'Hitachi', 'National', 'Benkan'],
-    products: ['Copper Fittings', 'Rime Copper Pancake Coil', 'Rime Copper Straight Length', 'THREADED FITTINGS (Hitachi)', 'GROOVED FITTINGS (National)', 'WELDED FITTINGS (Benkan)'],
+    brands: ['Rime', 'MUELLER (USA)', 'NWM (KOREA)', 'SAMPO (KOREA)'],
+    products: ['Copper coils', 'Copper straight pipes', 'Copper fittings'],
+    applications: 'Air Conditioning and Refrigeration Systems.',
   },
   6: {
     title: 'VAV and Dampers',
@@ -180,7 +230,20 @@ const PLACEHOLDER_SVG = 'data:image/svg+xml,' + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><rect fill="#f3f4f6" width="400" height="400"/><text x="50%" y="50%" fill="#9ca3af" font-family="sans-serif" font-size="14" text-anchor="middle" dy=".3em">Product image</text></svg>'
 )
 
-const PRODUCT_CATEGORIES = Object.entries(PRODUCT_DATA).map(([id, data]) => ({ id: Number(id), title: data.title }))
+const HIDDEN_PRODUCT_IDS = [6, 7, 11, 14]
+
+const PRODUCT_CATEGORIES = Object.entries(PRODUCT_DATA)
+  .filter(([id]) => !HIDDEN_PRODUCT_IDS.includes(Number(id)))
+  .map(([id, data]) => ({ id: Number(id), title: data.title }))
+
+const BRAND_LOGOS = {
+  Kimmco: '/images/logos/kimmco.png',
+  Afico: '/images/logos/AFICO.png',
+  'K Flex': '/images/logos/Kflex.png',
+  Aerofoam: '/images/logos/Aerofoam.png',
+  Tembo: '/images/logos/tembo.png',
+  'Vibratek India': '/images/logos/vibratek-india.png',
+}
 
 const INSULATION_ICONS = {
   fire: 'M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z',
@@ -296,14 +359,55 @@ export default function ProductPage() {
                 </svg>
                 Featured Brands
               </h2>
-              <div className="flex flex-wrap gap-3">
-                {productData.brands.map((brand) => (
-                  <span key={brand} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full font-semibold text-sm">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                    {brand}
-                  </span>
-                ))}
-              </div>
+              {productData.brands.some((b) => BRAND_LOGOS[b]) ? (
+                <div className="flex flex-wrap items-center gap-6">
+                  {productData.brands.map((brand) => {
+                    const logoSrc = BRAND_LOGOS[brand]
+                    return logoSrc ? (
+                      <div key={brand} className="h-16 flex items-center">
+                        <img
+                          src={logoSrc}
+                          alt={brand}
+                          className="h-12 w-auto object-contain drop-shadow-sm"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : (
+                      <span
+                        key={brand}
+                        className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full font-semibold text-sm"
+                      >
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        {brand}
+                      </span>
+                    )
+                  })}
+                </div>
+              ) : (
+                <div className="flex flex-wrap gap-3">
+                  {productData.brands.map((brand) => (
+                    <span
+                      key={brand}
+                      className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full font-semibold text-sm"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      {brand}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -379,6 +483,18 @@ export default function ProductPage() {
           </div>
         )}
 
+        {/* Applications */}
+        {productData.applications && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-extrabold text-navy mb-6">Applications</h2>
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 lg:p-8">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                {Array.isArray(productData.applications) ? productData.applications.join('. ') : productData.applications}
+              </p>
+            </div>
+          </div>
+        )}
+
         {num !== 13 && (
         <div className="mb-12">
           <h2 className="text-2xl font-extrabold text-navy mb-6">Product Gallery</h2>
@@ -386,7 +502,7 @@ export default function ProductPage() {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
               {DUCT_ACCESSORY_CARDS.map((card) => (
                 <div key={card.name} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1">
-                  <img src={`/${productImageFolders[2]}/${card.image}`} alt={card.name} className="w-full aspect-square object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = PLACEHOLDER_SVG }} />
+                  <img src={`/${productImageFolders[2]}/${card.image}`} alt={card.name} className="w-full aspect-[4/3] object-cover bg-gray-100 p-0 sm:p-0 group-hover:scale-105 transition-transform duration-300" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = PLACEHOLDER_SVG }} />
                   <h3 className="mt-3 text-sm font-semibold text-navy text-center px-2">
                     {card.name}
                   </h3>
@@ -407,7 +523,7 @@ export default function ProductPage() {
                   : 'group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1'
                 const imgClasses = isFullRowSilent
                   ? 'w-full object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300'
-                  : 'w-full aspect-square object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300'
+                  : 'w-full aspect-[4/3] object-cover bg-gray-100 p-0 sm:p-0 group-hover:scale-105 transition-transform duration-300'
                 return (
                   <div key={filename} className={wrapperClasses}>
                     <img

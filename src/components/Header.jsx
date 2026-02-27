@@ -7,15 +7,11 @@ const productItems = [
   { id: 3, label: 'Vibration Isolators' },
   { id: 4, label: 'Hangers & Supports' },
   { id: 5, label: 'Copper & Fittings' },
-  { id: 6, label: 'VAV and Dampers' },
-  { id: 7, label: 'ESP and Ecology' },
   { id: 8, label: 'Identification Labels and tags' },
   { id: 9, label: 'Silent Pipes And Fittings' },
   { id: 10, label: 'Decoduct Conduits and Fittings' },
-  { id: 11, label: 'Plumping' },
   { id: 12, label: 'Water Proofing Chemicals and Flooring Adhesives' },
   { id: 13, label: 'Water Treatment Chemicals' },
-  { id: 14, label: 'Miscellaneous Products' },
   { id: 15, label: 'Air Conditioners' },
 ]
 
