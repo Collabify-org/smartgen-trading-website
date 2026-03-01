@@ -7,7 +7,7 @@ const PRODUCT_DATA = {
     title: 'Thermal and Acoustic Insulation for Building and HVAC',
     description:
       'Discover our extensive range of thermal and acoustic insulation solutions featuring top brands like Kimmco, Afico, K Flex, and Aerofoam. From glass wool and rockwool to closed-cell rubber and XLPE foam, we provide high‑performance insulation for HVAC ducts, pipes, and building envelopes to improve energy efficiency, fire safety, and comfort in residential, commercial, and industrial projects.',
-    brands: ['Kimmco', 'Afico', 'K Flex', 'Aerofoam'],
+    brands: ['Kimmco', 'Afico', 'K Flex', 'Aerofoam', 'Insulflex'],
     products: [
       'Fiber Glass Roll Insulation with Aluminum Facing',
       'Fiber Glass Pipe Insulation with Aluminum Facing',
@@ -95,7 +95,7 @@ const PRODUCT_DATA = {
   2: {
     title: 'Duct Accessories',
     description: 'Complete range of HVAC duct accessories including flanges, corners, aluminum cladding, and flexible insulated ducts. Essential components for efficient duct system installation and maintenance.',
-    brands: ['Pabco', 'Aeroduct', 'Insulflex', 'Duct-Ficx', 'Xchem', 'Paragon', 'ITW'],
+    brands: ['Pabco', 'Aeroduct', 'Insulflex', 'Duct-Ficx', 'Xchem', 'Paragon', 'ITW', 'Smartgen'],
     products: [
       'Duct G Clamp With Bolt',
       'Duct Corner Plain',
@@ -142,18 +142,24 @@ const PRODUCT_DATA = {
     description: 'Comprehensive range of pipe hangers and supports from Tembo. Includes beam clamps, clevis hangers, pipe roller chairs, riser clamps, U-bolts, and plain hangers for secure pipe installation.Hangers and supports for mechanical, plumbing and fire fighting pipes.',
     brands: ['Tembo'],
     products: [
-      'Split Clamp with EPDM Lining',
+      'Split Clamp With EPDM Lining',
       'Split Clamp',
-      'Swivel Hanger(UL/FM)',
-      'Clevis Hanger(Ul/FM)',
-      'U bolt',
-      'U straps with and without EPDM Lining',
-      'Rubber Support Inserts',
-      'Riser Clamps',
-      'Pipe Roller chair',
+      'Swivel/Sprinkler Hanger UL/FM',
+      'Clevis Hanger UL/FM',
+      'U bolt With Nuts',
+      'U Bolt With EPDM Lining',
+      'U Strap Clamp',
+      'Rubber Support Insert',
+      'Riser Clamp',
+      'Riser Clamp With Lining',
+      'Pipe Roller Chair with Bolts',
       'Beam Clamp',
-      'Threaded Rods and Fasteners',
-      'Struct Channels',
+      'Struct Clamp',
+      'Slotted Channel',
+      'Insulation Protection Shield',
+      'Drop In Anchor',
+      'Threaded Rod',
+      'Nuts & Bolts',
     ],
     applications: 'Hangers and supports for mechanical, plumbing and fire fighting pipes.',
   },
@@ -161,7 +167,7 @@ const PRODUCT_DATA = {
     title: 'Copper & Fittings',
     description: 'Premium Rime copper products including pancake coils, straight lengths, and comprehensive copper fittings. Ideal for HVAC and plumbing applications requiring reliable copper solutions.',
     brands: ['Rime', 'MUELLER (USA)', 'NWM (KOREA)', 'SAMPO (KOREA)'],
-    products: ['Copper coils', 'Copper straight pipes', 'Copper fittings'],
+    products: ['Fittings', 'Coils', 'Straight Pipes'],
     applications: 'Air Conditioning and Refrigeration Systems.',
   },
   6: {
@@ -184,15 +190,15 @@ const PRODUCT_DATA = {
   },
   9: {
     title: 'Silent Pipes And Fittings',
-    description: 'Premium soundproof piping solutions from Vesbo and Incola. Reduce noise transmission in plumbing systems with our exclusive silent pipe technology for residential and commercial applications.',
-    brands: ['Vesbo', 'Incola'],
+    description: 'Premium soundproof piping solutions from Vesbo. Reduce noise transmission in plumbing systems with our exclusive silent pipe technology for residential and commercial applications.',
+    brands: ['Vesbo'],
     products: ['Silent Pipe Vesbo Exclusive', 'Soundproof Pipe Vesbo'],
   },
   10: {
     title: 'Decoduct Conduits and Fittings',
     description: 'Complete electrical conduit systems including Decoduct conduit fittings, PVC electrical conduits, and Edison switches. Reliable electrical infrastructure solutions for all your projects.',
     brands: ['Edison'],
-    products: ['Decoduct Conduit Fittings', 'PVC Electrical Conduits', 'Edison Switches'],
+    products: ['Decoduct Conduit Accessories', 'Decoduct Round Conduits', 'Edison Switches'],
   },
   11: {
     title: 'Plumbing',
@@ -204,7 +210,7 @@ const PRODUCT_DATA = {
     title: 'Water Proofing Chemicals and Flooring Adhesives',
     description: 'Professional waterproofing and flooring solutions from Xchem. Includes Ultrashield coatings, V-Bond adhesives, Turf Fix, and various specialized adhesives for construction and flooring applications.',
     brands: ['Xchem'],
-    products: ['Xchem Ultrashield AC10', 'Xchem Ultrashield HY-17 Hybrid PUD Coating', 'Xchem V-Bond 400 Vinyl Flooring Adhesive', 'Turf Fix 511', 'Masterfix 770', 'PU Sealant'],
+    products: ['Ultrashield AC10', 'Ultrashield HY-17', 'V-Bond 400', 'Turf Fix 511'],
   },
   13: {
     title: 'Water Treatment Chemicals',
@@ -222,7 +228,7 @@ const PRODUCT_DATA = {
     title: 'Air Conditioners',
     description: 'Premium O General air conditioning systems including ducted split AC units and split AC systems. Reliable cooling solutions for residential and commercial applications with energy-efficient technology.',
     brands: ['O General'],
-    products: ['Ducted Split AC', 'Split AC'],
+    products: ['Ducted Split Air Conditioning', 'Split AC With Inverter'],
   },
 }
 
@@ -241,8 +247,28 @@ const BRAND_LOGOS = {
   Afico: '/images/logos/AFICO.png',
   'K Flex': '/images/logos/Kflex.png',
   Aerofoam: '/images/logos/Aerofoam.png',
+  Insulflex: '/images/logos/insulflex.png',
   Tembo: '/images/logos/tembo.png',
   'Vibratek India': '/images/logos/vibratek-india.png',
+  // Product 2 (Duct Accessories) brands
+  Pabco: '/images/logos/pabco.png',
+  Aeroduct: '/images/logos/aeroduct.png',
+  'Duct-Ficx': '/images/logos/ductficx.jpg',
+  ITW: '/images/logos/itw.png',
+  Paragon: '/images/logos/paragon.png',
+  Smartgen: '/images/logos/smartgen.jpeg',
+  Xchem: '/images/logos/xchem.png',
+  // Product 5 (Copper & Fittings) brands
+  Rime: '/images/logos/rime.png',
+  'MUELLER (USA)': '/images/logos/mueller.png',
+  'NWM (KOREA)': '/images/logos/nvm.png',
+  'SAMPO (KOREA)': '/images/logos/sampo.png',
+  // Product 9 (Silent Pipes) brands
+  Vesbo: '/images/logos/vesbo.png',
+  // Product 10 (Decoduct Conduits) brands
+  Edison: '/images/logos/edison.png',
+  // Product 15 (Air Conditioners) brands
+  'O General': '/images/logos/ogeneral.jpg',
 }
 
 const INSULATION_ICONS = {
@@ -251,8 +277,79 @@ const INSULATION_ICONS = {
   wind: 'M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.242 4.243 3 3 0 004.242-4.243zm0-5.758a3 3 0 10-4.242-4.243 3 3 0 004.242 4.243z',
 }
 
+const PRODUCT_1_GALLERY_CARDS = [
+  { name: 'Fiber glass Blanket Insulation', image: 'kimmco-fiber-glass-duct-insulation-mePvDg6KwvHeM7OD.jpeg' },
+  { name: 'Fiber glass Acoustic Liner Insulation', image: 'fiber-glass-acoustic-insulation-AGB6g4VEDBCZLbPW.jpg' },
+  { name: 'Fiber glass Rigid Board Insulation', image: 'fiber-glass-board-insulation-mePvKneEZ9tonnlP.jpg' },
+  { name: 'Fiber glass Rigid Pipe Insulation', image: 'kimmco-pipe-insulation-1-YNqyaMxvPgTL1MXk.jpg' },
+  { name: 'XLPE Sheet Insulation', image: 'xlpe-sheet-A85wX4Q0zNuVowwW.jpg' },
+  { name: 'XLPE Pipe Insulation', image: 'xlpe-insulation-AMqbg4EnBJIaLEoe.jpg' },
+  { name: 'XLPE Roll Insulation', image: 'xlpe-thermal-insulation-sheet-AwvMKkaryku2Rz0D.jpg' },
+  { name: 'NBR Elastomeric Rubber Roll Insulation', image: 'rubber-insulation-A0xwXVeyG2c1EkMO.jpg' },
+  { name: 'NBR Elastomeric Self Adhesive Rubber Insulation', image: 'self-adhesive-rubber-insulation-mjEvK9924oh9ZRPW.jpg' },
+  { name: 'NBR Elastomeric Rubber Pipe Insulation', image: 'rubber-pipe-insulation-AVLpgbbJjzH9V9kB.jpg' },
+]
+
+const PRODUCT_3_GALLERY_CARDS = [
+  { name: 'Cased Spring Mount', image: 'whatsapp-image-2024-07-29-at-3.58(1).32-pm-AMqbBZLZeNsGbBo1.jpeg' },
+  { name: 'Restraint Spring Mount', image: 'whatsapp-image-2024-07-29-at-3.58(1).32-pm-1-A1awnpvp0bUoLVWw.jpeg' },
+  { name: 'Spring Hanger', image: 'whatsapp-image-2024-07-29-at-3.58.32-pm-2-Yyv3WlplVJCPKnVq.jpeg' },
+  { name: 'Single Spring Mount', image: 'whatsapp-image-2024-07-29-at-3.58.32-pm-3-YKb6eDOD8ETkl5Qk.jpeg' },
+  { name: 'Rubber Mount for Split AC Outdoor Unit', image: 'round-rubber-mount-for-split-ac-unit-mxBZ6o3B88u85988.jpg' },
+  { name: 'Multilayer Rubber pad', image: 'metal-sandwich-pad-mp8vjwyxXkhor75j.jpg' },
+  { name: 'Sandwich Rubber pad', image: 'sandwich-pad-mePvDwz8wXTKkk8j.jpg' },
+  { name: 'Waffle-Anti Vibration pad', image: 'waffle-pad-Yanylg54q2I3g64D.jpg' },
+  { name: 'Duct Mount', image: 'duct-mount-mp8vjwyx7PIbQbKo.jpg' },
+  { name: 'Neoprene Rubber Hanger', image: 'whatsapp-image-2024-07-29-at-3.58(1).32-pm-4-Aq2v5wpw1EFJgJKE.jpeg' },
+]
+
+const PRODUCT_4_GALLERY_CARDS = [
+  { name: 'Split Clamp With EPDM Lining', image: 'rubber-clamps-AwvMN3VN8qIGNX8x.png' },
+  { name: 'Split Clamp', image: 'plain-hanger-dJo633xLrrt9lE4g.jpg' },
+  { name: 'Swivel/Sprinkler Hanger UL/FM', image: 'sprinkler-hanger-ul-fm-tembo-mxBZ66Grr1Up8vqa.png' },
+  { name: 'Clevis Hanger UL/FM', image: 'clevis-hanger-tembo-ulfm-YKb6eng6OZTa7OnM.jpg' },
+  { name: 'U bolt With Nuts', image: 'u-bolt-tembo-YX4yqo32zwSwK8O1.png' },
+  { name: 'U Bolt With EPDM Lining', image: 'u-bolt-with-lining-tembo-A85wvvyO0ZcMxl9K.jpg' },
+  { name: 'U Strap Clamp', image: 'u-strap-1-mxBZ66k0jriV42P4.jpg' },
+  { name: 'Rubber Support Insert', image: 'rubber-support-inserts-mxBZ6e4Mw0up17go.png' },
+  { name: 'Riser Clamp', image: 'riser-clamp-tembo-AGB6DEg6wNiJELzb.png' },
+  { name: 'Riser Clamp With Lining', image: 'riser-clamp-with-lining-tembo-AVLpvogpM6hJBgQR.png' },
+  { name: 'Pipe Roller Chair with Bolts', image: 'pipe-roller-chair-tembo-AMqbB6gbK9S48Rjr.png' },
+  { name: 'Beam Clamp', image: 'beam-clamp-tembo-AVLpvogpy1FpNlpL.png' },
+  { name: 'Struct Clamp', image: 'struct-clamp-tembo-YNqyaWgy1pspJvjO.png' },
+  { name: 'Slotted Channel', image: 'clotted-channel--tembo-YbNvPPZzb8F616XK.jpg' },
+  { name: 'Insulation Protection Shield', image: 'insulatipn-protection-shield-ipc-tembo-ALpn1Ngn6KiXzqko.jpg' },
+  { name: 'Drop In Anchor', image: 'drop-in-anchor-tembo-YKb6eeJWonce75Be.jpg' },
+  { name: 'Threaded Rod', image: 'threaded-roads-tembo-mnlvxoKvaPF8y6jZ.jpg' },
+  { name: 'Nuts & Bolts', image: 'hex-nuts-bolts-and-washer-tembo-YbNvPk0vKGUzO1N2.jpg' },
+]
+
+const PRODUCT_5_GALLERY_CARDS = [
+  { name: 'Fittings', image: 'copper-fittings-Yyv38P3V3JTNp7ED.jpg' },
+  { name: 'Coils', image: 'rime-copper-pancake-coil-riyadh-AoPv96eP6yiBeDL8.jpg' },
+  { name: 'Straight Pipes', image: 'rime-copper-straight-length-dJo6RBZDpxHMnNB3.jpg' },
+]
+
+const PRODUCT_10_GALLERY_CARDS = [
+  { name: 'Decoduct Conduit Accessories', image: 'decoduct-conduit-fittings-AzG3L2gONgcngNJN.png' },
+  { name: 'Decoduct Round Conduits', image: 'pvc-electrical-conduits-5-YKbEjRWMZ4S8x0oz.jpg' },
+  { name: 'Edison Switches', image: 'edison-switches-AoPq29oJOVU07oOx.jpg' },
+]
+
+const PRODUCT_12_GALLERY_CARDS = [
+  { name: 'Ultrashield AC10', image: 'xchem-ultrashield-ac10-mv0DnBWDeVUVL3Q0.jpg' },
+  { name: 'Ultrashield HY-17', image: 'xchem-ultrashield-hy-17-hybrid-pud-coating-YrDlEZbOaNcLNN05.jpg' },
+  { name: 'V-Bond 400', image: 'xchem-v-bond-400-vinyl-flooring-adhesive-dJo63L1G9nH7y1vR.jpg' },
+  { name: 'Turf Fix 511', image: 'turf-fix-511-xchem-smartgen-AR0LQgEB1au5wyPB.jpg' },
+]
+
+const PRODUCT_15_GALLERY_CARDS = [
+  { name: 'Ducted Split Air Conditioning', image: 'ducted-split-ac-o-general-smart-generation-AQExxjQ2DgcR8O3v.webp' },
+  { name: 'Split AC With Inverter', image: 'split-ac-o-general-mePxxXO60rTpwDaL.webp' },
+]
+
 const DUCT_ACCESSORY_CARDS = [
-  { name: 'Duct G Clamp With Bolt', image: 'jubilee-clamp-YbNv0vL4LBiZJ67r.jpg' },
+  { name: 'Duct G Clamp With Bolt', image: 'g_clamp.png' },
   { name: 'Duct Corner Plain', image: 'duct-corner-YlevKvg07JC4jNrN.jpg' },
   { name: 'Insulated Flexible Duct', image: 'flexible-insulated-duct-mk3zKzJWNxSpDB3r.jpg' },
   { name: 'Aluminum Un Insulated Flexible Duct', image: 'un-insulated-flexible-duct-YD06X6wWN5IBVPly.jpg' },
@@ -267,9 +364,9 @@ const DUCT_ACCESSORY_CARDS = [
   { name: 'Flexible Duct Connector', image: 'duct-connector-m7VwXwJX6etVlLWO.jpg' },
   { name: 'Acrylic Duct Sealant', image: 'logo-chemx3217-mnlvKqBMP3HkrQNR.jpeg' },
   { name: 'Duct Canvas Coating / Lagging Adhesive', image: 'enicoat-3036-plastic-pail-mjEv1bBVlbTMQZz5.png' },
-  { name: 'Insulation Glue', image: 'xchem-logo-AwvMNb2x2Pce8Oj6.png' },
+  { name: 'Insulation Glue', image: 'chemxglue-8110-metal-pail-mjEv1bBpGOc5eBGr.png' },
   { name: 'Aluminum Cladding Rolls', image: 'aluminum-cladding-pabco-A3QwLjW6ELso6y9G.jpg' },
-  { name: 'Aluminum Sheet', image: 'aluminum-cladding-pabco-A3QwLjW6ELso6y9G.jpg' },
+  { name: 'Aluminum Sheet', image: 'aluminum-sheets-Yg2WZvb1oEHaBLMk.png' },
   { name: 'Aluminum Strapping', image: 'aluminum-strap-YBgrQZVoQ4Il6zeq.jpg' },
   { name: 'Wing Seal', image: 'wing-seal-YKb6ejpo8DhEzNBo.jpeg' },
 ]
@@ -502,8 +599,85 @@ export default function ProductPage() {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
               {DUCT_ACCESSORY_CARDS.map((card) => (
                 <div key={card.name} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1">
-                  <img src={`/${productImageFolders[2]}/${card.image}`} alt={card.name} className="w-full aspect-[4/3] object-cover bg-gray-100 p-0 sm:p-0 group-hover:scale-105 transition-transform duration-300" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = PLACEHOLDER_SVG }} />
-                  <h3 className="mt-3 text-sm font-semibold text-navy text-center px-2">
+                  <img src={`/${productImageFolders[2]}/${card.image}`} alt={card.name} className="w-full aspect-[4/3] object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = PLACEHOLDER_SVG }} />
+                  <h3 className="mt-3 text-sm font-semibold text-navy text-center px-2 pb-1">
+                    {card.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          ) : num === 1 && PRODUCT_1_GALLERY_CARDS.length > 0 ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+              {PRODUCT_1_GALLERY_CARDS.map((card) => (
+                <div key={card.name} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1">
+                  <img src={`/${productImageFolders[1]}/${card.image}`} alt={card.name} className="w-full aspect-[4/3] object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = PLACEHOLDER_SVG }} />
+                  <h3 className="mt-3 text-sm font-semibold text-navy text-center px-2 pb-1">
+                    {card.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          ) : num === 3 && PRODUCT_3_GALLERY_CARDS.length > 0 ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+              {PRODUCT_3_GALLERY_CARDS.map((card) => (
+                <div key={card.name} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1">
+                  <img src={`/${productImageFolders[3]}/${card.image}`} alt={card.name} className="w-full aspect-[4/3] object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = PLACEHOLDER_SVG }} />
+                  <h3 className="mt-3 text-sm font-semibold text-navy text-center px-2 pb-1">
+                    {card.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          ) : num === 4 && PRODUCT_4_GALLERY_CARDS.length > 0 ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+              {PRODUCT_4_GALLERY_CARDS.map((card) => (
+                <div key={card.name} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1">
+                  <img src={`/${productImageFolders[4]}/${card.image}`} alt={card.name} className="w-full aspect-[4/3] object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = PLACEHOLDER_SVG }} />
+                  <h3 className="mt-3 text-sm font-semibold text-navy text-center px-2 pb-1">
+                    {card.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          ) : num === 5 && PRODUCT_5_GALLERY_CARDS.length > 0 ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+              {PRODUCT_5_GALLERY_CARDS.map((card) => (
+                <div key={card.name} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1">
+                  <img src={`/${productImageFolders[5]}/${card.image}`} alt={card.name} className="w-full aspect-[4/3] object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = PLACEHOLDER_SVG }} />
+                  <h3 className="mt-3 text-sm font-semibold text-navy text-center px-2 pb-1">
+                    {card.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          ) : num === 10 && PRODUCT_10_GALLERY_CARDS.length > 0 ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+              {PRODUCT_10_GALLERY_CARDS.map((card) => (
+                <div key={card.name} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1">
+                  <img src={`/${productImageFolders[10]}/${card.image}`} alt={card.name} className="w-full aspect-[4/3] object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = PLACEHOLDER_SVG }} />
+                  <h3 className="mt-3 text-sm font-semibold text-navy text-center px-2 pb-1">
+                    {card.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          ) : num === 12 && PRODUCT_12_GALLERY_CARDS.length > 0 ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+              {PRODUCT_12_GALLERY_CARDS.map((card) => (
+                <div key={card.name} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1">
+                  <img src={`/${productImageFolders[12]}/${card.image}`} alt={card.name} className="w-full aspect-[4/3] object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = PLACEHOLDER_SVG }} />
+                  <h3 className="mt-3 text-sm font-semibold text-navy text-center px-2 pb-1">
+                    {card.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          ) : num === 15 && PRODUCT_15_GALLERY_CARDS.length > 0 ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+              {PRODUCT_15_GALLERY_CARDS.map((card) => (
+                <div key={card.name} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1">
+                  <img src={`/${productImageFolders[15]}/${card.image}`} alt={card.name} className="w-full aspect-[4/3] object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = PLACEHOLDER_SVG }} />
+                  <h3 className="mt-3 text-sm font-semibold text-navy text-center px-2 pb-1">
                     {card.name}
                   </h3>
                 </div>
@@ -518,12 +692,17 @@ export default function ProductPage() {
                   (filename.includes('incola-exclusive') ||
                     filename.includes('incola-advantages-yeni-2') ||
                     filename.includes('soundproof-pipe-vesbo'))
+                const containInBoxProducts = [1, 3, 4, 5, 8, 10, 12, 15]
+                const useContainInBox = containInBoxProducts.includes(num)
                 const wrapperClasses = isFullRowSilent
                   ? 'group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1 col-span-2 sm:col-span-3 lg:col-span-4'
                   : 'group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1'
+                const defaultImgClasses = useContainInBox
+                  ? 'w-full aspect-[4/3] object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300'
+                  : 'w-full aspect-[4/3] object-cover bg-gray-100 p-0 sm:p-0 group-hover:scale-105 transition-transform duration-300'
                 const imgClasses = isFullRowSilent
                   ? 'w-full object-contain bg-gray-100 p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300'
-                  : 'w-full aspect-[4/3] object-cover bg-gray-100 p-0 sm:p-0 group-hover:scale-105 transition-transform duration-300'
+                  : defaultImgClasses
                 return (
                   <div key={filename} className={wrapperClasses}>
                     <img
